@@ -1,0 +1,49 @@
+<?php
+class calendar_lang
+{
+	const cal_su		= "日";
+	const cal_mo 		= "一";
+	const cal_tu 		= "二";
+	const cal_we 		= "三";
+	const cal_th 		= "四";
+	const cal_fr 		= "五";
+	const cal_sa 		= "六";
+	const cal_sun 		= "日";
+	const cal_mon 		= "一";
+	const cal_tue 		= "二";
+	const cal_wed 		= "三";
+	const cal_thu 		= "四";
+	const cal_fri 		= "五";
+	const cal_sat 		= "六";
+	const cal_sunday	= "星期日";
+	const cal_monday	= "星期一";
+	const cal_tuesday	= "星期二";
+	const cal_wednesday	= "星期三";
+	const cal_thursday	= "星期四";
+	const cal_friday	= "星期五";
+	const cal_saturday	= "星期六";
+	const cal_jan 		= "一月";
+	const cal_feb 		= "二月";
+	const cal_mar 		= "三月";
+	const cal_apr 		= "四月";
+	const cal_may 		= "五月";
+	const cal_jun 		= "六月";
+	const cal_jul 		= "七月";
+	const cal_aug 		= "八月";
+	const cal_sep 		= "九月";
+	const cal_oct 		= "十月";
+	const cal_nov 		= "十一月";
+	const cal_dec 		= "十二月";
+	const cal_january 	= "一月";
+	const cal_february 	= "二月";
+	const cal_march 	= "三月";
+	const cal_april		= "四月";
+	const cal_mayl 		= "五月";
+	const cal_june 		= "六月";
+	const cal_july 		= "七月";
+	const cal_august	= "八月";
+	const cal_september	= "九月";
+	const cal_october 	= "十月";
+	const cal_november	= "十一月";
+	const cal_december 	= "十二月";
+}

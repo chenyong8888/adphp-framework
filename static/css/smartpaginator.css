@@ -1,0 +1,119 @@
+.green
+{
+	width: 658px;
+	height: 30px;
+	padding: 0;
+	margin:0;
+	/*border-radius: 8px;
+	-moz-border-radius: 8px;*/
+}
+.green div.short
+{
+	float: right;
+	margin: 0;
+	padding: 0;
+	margin-right: 10px;
+	width: 74px;
+}
+.green div.short input
+{
+	width: 28px;
+	height: 18px;
+	border: none;
+	margin-left: 8px;
+	float: left;
+}
+.green ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	margin-right: 4px;	
+}
+.green ul li
+{
+	float:left;
+	display: inline;
+	margin-left: 6px;
+}
+.green ul li a.normal
+{
+	text-decoration: none;
+	display: inline-table;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #588500;
+	color: White;
+	border: solid 1px #5f9000;
+	*padding:0 5px;
+
+
+}
+.green span
+{
+	margin-left: 4px;
+	color: black;
+	float: left;
+	height:20px;
+	line-height:20px;
+	font-weight:normal;
+}
+.green span p{}
+
+.green .btn
+{
+	display: block;
+	width: 40px;
+	text-align: center;
+	float: left;
+	padding: 0;
+	margin: 0;
+	margin-left: 4px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background:#588500;
+	color:#fff;
+	border: solid 1px #5f9000;
+	cursor:pointer;
+}
+.green ul li a.active
+{
+	text-decoration: none;
+	*padding:0 5px;
+	display: inline-table;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: #344C00;
+	color: #F8EB00;
+	border: solid 1px #5f9000;
+	-webkit-border-radius: 4px;
+}
+
+
+/*将以上复制一份取一个颜色名与.green对应，可重定义一个皮肤主题，同时修改页面主题调用处名称：theme: 'green'*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<script src="js/config.js" type="text/javascript"></script>
+<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="js/smartpaginator.js" type="text/javascript"></script>
+<link href="css/smartpaginator.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var pageNumber = 3;
+var testUrl = appUrl+"/Welcome/test/"+pageNumber+"/";
+
+$(document).ready(function(){	
+	init(pageNumber);
+});
+
+function init(pageNumber){
+	onChange(1);
+	$.getJSON(testUrl,function(data){
+		  var total = data['total'];		      	
+		  $('#green0').smartpaginator({totalrecords: total, recordsperpage: pageNumber, length: 4, next: 'Next', prev: 'Prev', first: 'First', last: 'Last', theme: 'green',display:'single',onchange: onChange});
+		  $('#green1').smartpaginator({totalrecords: total, recordsperpage: pageNumber, length: 4, next: '>', prev: '<', first: '|<', last: '>|', theme: 'green',initval:'3',onchange: onChange});
+		  $('#green2').smartpaginator({totalrecords: total, recordsperpage: pageNumber, length: 4, next: 'Next', prev: 'Prev', first: 'First', last: 'Last', theme: 'green',display:'single',showLabel:'no',onchange: onChange});
+		  $('#green3').smartpaginator({totalrecords: total, recordsperpage: pageNumber, length: 10, next: 'Next', prev: 'Prev', first: 'First', last: 'Last', theme: 'green',display:'single',showLabel:'no',onchange: onChange});
+	});	
+}
+
+function onChange(newPage){	
+	$.getJSON(testUrl+(newPage-1),showList);
+}
+	
+function showList(data){
+	//console.log(data);	
+	if(data!=''){
+		$('#list').hide();
+		var listContent = '';
+	    for(var key in data['list']){            	
+	    	listContent += data['list'][key].email + '<br>';             
+	    }
+	    $('#list').html(listContent);
+	    $('#list').show(300);
+	}
+}
+
+</script>
+<br>
+<div style="height:50px;">
+<div id="list"></div>
+</div>
+<br><br>
+<div id="green0"></div>
+<br><br>
+<div id="green1"></div>
+<br><br>
+<div id="green2"></div>
+<br><br>
+<div id="green3"></div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

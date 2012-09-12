@@ -33,24 +33,12 @@ class PluginManager{
 		}
 	}
 	
-	/**
-	 * 
-	 * @param  $hook
-	 * @param  $reference
-	 * @param  $method
-	 */
 	public function register($hook, &$reference, $method)
 	{
 		$key = get_class($reference).'->'.$method;
 		$this->_listeners[$hook][$key] = array(&$reference, $method);
 	}
 	
-	/**
-	 * 
-	 * @param key $hook
-	 * @param method param $data
-	 * @return string
-	 */
 	public function trigger($hook, $data=null)
 	{
 		$result = NULL;

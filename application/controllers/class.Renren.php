@@ -1,13 +1,14 @@
 <?php
-class Renren extends Controller{	
+/**
+ * 
+ * @author chenyong
+ *
+ */
+class Renren extends Controller{
 	
 	public function __construct(){
 		parent::__construct();
-		$plugin = array(
-				'name' => 'renren'
-		);
-		$plugins = array($plugin);
-		$this->pluginManager->loadPlugin($plugins);
+		$this->loadPlugin('renren');
 	}
 
 	public function index(){

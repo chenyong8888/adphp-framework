@@ -1,13 +1,14 @@
 <?php
+/**
+ * 
+ * @author chenyong
+ *
+ */
 class QQWeibo extends Controller{
 	
 	public function __construct(){
 		parent::__construct();
-		$plugin = array(
-				'name' => 'qqweibo'
-		);
-		$plugins = array($plugin);
-		$this->pluginManager->loadPlugin($plugins);
+		$this->loadPlugin('qqweibo');
 	}
 	
 	public function index(){

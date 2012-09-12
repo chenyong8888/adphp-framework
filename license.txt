@@ -1,7 +1,7 @@
 Copyright (c) 2012 - 2015, chenyong.
 All rights reserved.
 
-Version:2.1.1
+Version:2.1.3
 
 This license is a legal agreement between you and chenyong. for the use
 of adphp-framework Software (the "Software").  By obtaining the Software you

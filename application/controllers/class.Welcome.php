@@ -1,4 +1,9 @@
 <?php
+/**
+ * 
+ * @author chenyong
+ *
+ */
 class Welcome extends Controller{
 	
 	public function __construct(){
@@ -41,14 +46,10 @@ class Welcome extends Controller{
 		$this->display();
 	}
 	
-	public function plugin(){
-		$plugin = array(
-			'name' => 'demo'//name and path of plug-in
-		);
-		$plugins = array($plugin);
-		$this->pluginManager->loadPlugin($plugins);
-		
-		$this->pluginManager->trigger('demo_say_hello','');
+	public function createCode(){
+		$this->loadPlugin('phpqrcode');
+		$config = array('哈哈',false,'M','4','2',false);
+		$this->pluginManager->trigger('qrcode_createCode',$config);
 	}
 }
 

@@ -19,6 +19,14 @@ class Controller{
 		$this->pluginManager = new pluginManager();
 	}
 	
+	public function loadPlugin($namePlugin){
+		$plugin = array(
+				'name' => $namePlugin
+		);
+		$plugins = array($plugin);
+		$this->pluginManager->loadPlugin($plugins);
+	}
+	
 	public function addtemplate($file,$data = array()){
 		array_push($this->displayfile,$file);
 		array_push($this->displaydata,$data);

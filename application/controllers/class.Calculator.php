@@ -1,4 +1,9 @@
 <?php
+/**
+ * 
+ * @author chenyong
+ *
+ */
 class Calculator extends Controller{
 	
 	public function __construct(){

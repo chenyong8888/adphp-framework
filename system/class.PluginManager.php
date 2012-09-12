@@ -51,7 +51,7 @@ class PluginManager{
 	 * @param method param $data
 	 * @return string
 	 */
-	public function trigger($hook, $data='')
+	public function trigger($hook, $data=null)
 	{
 		$result = NULL;
 		if (isset($this->_listeners[$hook]) && is_array($this->_listeners[$hook]) && count($this->_listeners[$hook]) > 0)

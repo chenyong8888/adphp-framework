@@ -44,14 +44,14 @@ require_once 'config.inc.php'; #Include configure resources
 		
 		$this->_config = $config;
 		
-		$this->_config->APIURL = APIURL;
-		$this->_config->APPID = APPID;
-		$this->_config->APIKey = APIKey;
-		$this->_config->SecretKey = SecretKey;
-		$this->_config->APIVersion = APIVersion;
-		$this->_config->decodeFormat = decodeFormat;
-		$this->_config->redirecturi = redirecturi;
-		$this->_config->scope = scope;
+		$this->_config->APIURL = renren_APIURL;
+		$this->_config->APPID = renren_APPID;
+		$this->_config->APIKey = renren_APIKey;
+		$this->_config->SecretKey = renren_SecretKey;
+		$this->_config->APIVersion = renren_APIVersion;
+		$this->_config->decodeFormat = renren_decodeFormat;
+		$this->_config->redirecturi = renren_redirecturi;
+		$this->_config->scope = renren_scope;
 		
 		if(empty($this->_config->APIURL) || empty($this->_config->APIKey) || empty($this->_config->SecretKey)){
 			throw new exception('Invalid API URL or API key or Secret key, please check config.inc.php');

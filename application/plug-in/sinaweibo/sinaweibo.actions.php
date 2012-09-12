@@ -1,9 +1,13 @@
 <?php
-//要使用sina微博的功能需要使用php_curl 函数
 session_start();
 include_once( 'config.php' );
 include_once( 'saetv2.ex.class.php' );
-
+/**
+ *
+ * @author chenyong
+ * Must open the php_curl function
+ *
+ */
 class sinaweibo_actions
 {
 	protected $o = null;
@@ -11,25 +15,25 @@ class sinaweibo_actions
 	
 	function __construct(&$pluginManager)
 	{
-		if(WB_AKEY=='' || WB_SKEY==''){
+		if(sina_WB_AKEY=='' || sina_WB_SKEY==''){
 			echo 'sina WB_AKEY and WB_SKEY cannot be null';
 			exit;
 		}
-		$this->o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+		$this->o = new SaeTOAuthV2( sina_WB_AKEY , sina_WB_SKEY );
 		$pluginManager->register('sinaweibo_callAuthPage', $this, 'callAuthPage');
 		$pluginManager->register('sinaweibo_checkAuth', $this, 'checkAuth');
 		$pluginManager->register('sinaweibo_loginUserInfo', $this, 'loginUserInfo');
 	}
 	
 	public function callAuthPage(){
-		return $this->o->getAuthorizeURL( WB_CALLBACK_URL );
+		return $this->o->getAuthorizeURL(sina_WB_CALLBACK_URL);
 	}
 	
 	public function checkAuth(){
 		if (isset($_REQUEST['code'])) {
 			$keys = array();
 			$keys['code'] = $_REQUEST['code'];
-			$keys['redirect_uri'] = WB_CALLBACK_URL;
+			$keys['redirect_uri'] = sina_WB_CALLBACK_URL;
 			try {
 				$token = $this->o->getAccessToken('code', $keys ) ;
 			} catch (OAuthException $e) {
@@ -46,7 +50,7 @@ class sinaweibo_actions
 	
 	public function createClient(){
 		if(empty($this->c)){
-			$this->c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
+			$this->c = new SaeTClientV2( sina_WB_AKEY , sina_WB_SKEY , $_SESSION['token']['access_token'] );
 		}
 	}
 	

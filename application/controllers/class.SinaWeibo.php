@@ -1,13 +1,14 @@
 <?php
+/**
+ * 
+ * @author chenyong
+ *
+ */
 class SinaWeibo extends Controller{	
 	
 	public function __construct(){
 		parent::__construct();
-		$plugin = array(
-				'name' => 'sinaweibo'
-		);
-		$plugins = array($plugin);
-		$this->pluginManager->loadPlugin($plugins);
+		$this->loadPlugin('sinaweibo');
 	}
 	
 	public function index(){

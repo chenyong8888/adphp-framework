@@ -22,13 +22,13 @@
 // $config->redirecturi= 'http://127.0.0.1/phpsdk/accesstoken.php';//你的获取code的回调地址，也是accesstoken的回调地址
 // $config->scope='publish_feed,photo_upload';
 
-define( "APIURL" , 'http://api.renren.com/restserver.do' );
-define( "APPID" , '142905' );
-define( "APIKey" , 'fc1d05d2561d42f0afee7ab4ebd02ed8' );
-define( "SecretKey" , 'c5b9bb0cfb0d475eaa79e4f629b3a68b' );
-define( "APIVersion" , '1.0' );
-define( "decodeFormat" , 'json' );
+define( "renren_APIURL" , 'http://api.renren.com/restserver.do' );
+define( "renren_APPID" , '142905' );
+define( "renren_APIKey" , 'fc1d05d2561d42f0afee7ab4ebd02ed8' );
+define( "renren_SecretKey" , 'c5b9bb0cfb0d475eaa79e4f629b3a68b' );
+define( "renren_APIVersion" , '1.0' );
+define( "renren_decodeFormat" , 'json' );
 
-define( "redirecturi" , 'http://10086.client.sina.com.cn/index.php?control=Renren&action=callBack' );
-define( "scope" , 'publish_feed,photo_upload' );
+define( "renren_redirecturi" , 'http://10086.client.sina.com.cn/index.php?control=Renren&action=callBack' );
+define( "renren_scope" , 'publish_feed,photo_upload' );
 ?>

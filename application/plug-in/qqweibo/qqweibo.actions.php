@@ -1,9 +1,14 @@
 <?php
-//要使用qq微博的功能需要使用php_curl 函数
 session_start();
 require_once 'Config.php';
 require_once 'Tencent.php';
 
+/**
+ * 
+ * @author chenyong
+ * Must open the php_curl function
+ *
+ */
 class qqweibo_actions
 {
 	protected $o = null;
@@ -50,12 +55,12 @@ class qqweibo_actions
 	        	return false;
 	        }
 	    } else {
-	        if ($_GET['openid'] && $_GET['openkey']){//应用频道
+	        if ($_GET['openid'] && $_GET['openkey']){
 	            $_SESSION['t_openid'] = $_GET['openid'];
 	            $_SESSION['t_openkey'] = $_GET['openkey'];
 	            $r = OAuth::checkOAuthValid();
 	            if ($r) {
-	                header('Location: ' . qq_callback_url);//刷新页面
+	                header('Location: ' . qq_callback_url);
 	            } else {
 	                 return false;
 	            }

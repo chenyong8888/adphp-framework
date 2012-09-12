@@ -23,12 +23,12 @@
 // $config->scope='publish_feed,photo_upload';
 
 define( "renren_APIURL" , 'http://api.renren.com/restserver.do' );
-define( "renren_APPID" , '142905' );
-define( "renren_APIKey" , 'fc1d05d2561d42f0afee7ab4ebd02ed8' );
-define( "renren_SecretKey" , 'c5b9bb0cfb0d475eaa79e4f629b3a68b' );
+define( "renren_APPID" , 'xxxxxxx' );
+define( "renren_APIKey" , 'xxxxxxxxxxxxxxxxxxxx' );
+define( "renren_SecretKey" , 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' );
 define( "renren_APIVersion" , '1.0' );
 define( "renren_decodeFormat" , 'json' );
 
-define( "renren_redirecturi" , 'http://10086.client.sina.com.cn/index.php?control=Renren&action=callBack' );
+define( "renren_redirecturi" , 'xxxxxxxxxxxxxxxx?control=Renren&action=callBack' );
 define( "renren_scope" , 'publish_feed,photo_upload' );
 ?>
